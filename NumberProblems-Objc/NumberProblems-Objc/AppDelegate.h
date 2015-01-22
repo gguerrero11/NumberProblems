@@ -18,5 +18,8 @@
 // Add a method caled mulitpled that take an integer and returns an integer
 - (int) multiplied:(int)mInt;
 
+// Add a method called divided that takes an integer and returns an integer
+- (int) divided:(int)dInt;
+
 @end
 
