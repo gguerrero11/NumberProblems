@@ -12,6 +12,11 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+// Add a method called iterateCount that takes an integer
+- (void) iterateCount:(int)num;
+
+// Add a method caled mulitpled that take an integer and returns an integer
+- (int) multiplied:(int)mInt;
 
 @end
 
