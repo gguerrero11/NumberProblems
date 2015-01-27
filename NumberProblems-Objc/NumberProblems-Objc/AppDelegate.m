@@ -15,9 +15,9 @@
 @implementation AppDelegate
 
 // At the top of the class declare static integer called multiple and set it equal to 8
-static int multiple = 8;
+static int multiple = 5;
 // At the top of the class declare static integer called divisor and set it equal to 6
-static int divisor = 6;
+static int divisor = 7;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self iterateCount:4];
@@ -34,16 +34,16 @@ static int divisor = 6;
     num --;
     // in the iterateCount method, call multiplied and store the return value in a new variable
     int multiplied = [self multiplied:num];
-    // Add a ine that prints the result to the console with message:
+    // Add a line that prints the result to the console with message:
     // "Multiplied [integer] by [multiple] to be [multiplied]" where
     // the value returned by the multiplied get printed inline
     NSLog(@"Multiplied %d by %d to be %d", num, multiple, multiplied);
     // add a line that calls divided and passes in the value returned by multiplied
-    int divided = [self divided:multiplied];
+    float divided = [self divided:multiplied];
     // prints the result to the console with the message
     // "Divided [mulitplied] by [divisor] to be [divided]" where the value returned by divided gets printed inline
-    NSLog(@"Divided %d by %d to be %d", multiplied, divisor, divided);
-
+    // OLD NSLog(@"Divided %d by %d to be %d", multiplied, divisor, divided);
+    NSLog(@"Divided %d by %d to be %f", multiplied, divisor, divided);
 }
 
 // Step 3: Create a calculation method (multiply)
@@ -54,9 +54,22 @@ static int divisor = 6;
 }
 
 // Step 4: Create another calculation method (divide)
-- (int) divided:(int)dInt {
-    dInt /= divisor;
-    return dInt;
+/* 
+ Step 5: Get floating-point answers
+ 
+ When iterateCount prints divided it should be a floating 
+ point value. The others should not.
+ Go back through the multiplied and divided methods and 
+ update them so that the iterateCount method can print a 
+ floating point answer. 
+ */
+
+//- (int) divided:(int)dInt {
+- (float) divided:(float)dFloat{
+    dFloat /= divisor;
+    return dFloat;
 }
+
+
 
 @end

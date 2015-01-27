@@ -19,7 +19,7 @@
 - (int) multiplied:(int)mInt;
 
 // Add a method called divided that takes an integer and returns an integer
-- (int) divided:(int)dInt;
-
+//- (int) divided:(int)dInt;
+- (float) divided:(float)dFloat;
 @end
 
